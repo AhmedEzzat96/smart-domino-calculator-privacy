@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Smart Domino Calculator — snap tiles, score smarter, and keep the game moving.">
+  <title>Smart Domino Calculator</title>
+  <style>
+    :root { color-scheme: light; --ink: #173f31; --muted: #5d6b65; --paper: #f6faf7; --card: #fff; --line: #d6e1da; --accent: #1d6049; --gold: #c9973e; }
+    * { box-sizing: border-box; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font: 16px/1.65 -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; }
+    .shell { max-width: 1000px; margin: 0 auto; padding: 30px 20px 60px; }
+    header { display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+    .brand { display: flex; align-items: center; gap: 12px; font-weight: 750; letter-spacing: -.02em; }
+    .mark { width: 42px; height: 42px; display: grid; place-items: center; border-radius: 13px; background: var(--accent); }
+    .mark span { width: 20px; height: 20px; display: block; background: #e7f0e9; border-radius: 5px; box-shadow: 25px 0 #e7f0e9, 0 25px #e7f0e9, 25px 25px #e7f0e9; transform: scale(.38); }
+    nav a { color: var(--accent); font-weight: 650; text-decoration: none; margin-left: 18px; }
+    .hero { display: grid; grid-template-columns: 1.1fr .9fr; gap: 36px; align-items: center; padding: 90px 0 76px; }
+    h1, h2 { line-height: 1.1; letter-spacing: -.045em; }
+    h1 { margin: 0 0 18px; max-width: 620px; font-size: clamp(2.8rem, 7vw, 5.3rem); }
+    h2 { margin: 0 0 12px; font-size: 1.65rem; }
+    .lede { max-width: 560px; margin: 0 0 26px; color: var(--muted); font-size: 1.18rem; }
+    .button { display: inline-block; padding: 13px 18px; border-radius: 13px; background: var(--accent); color: #fff; font-weight: 750; text-decoration: none; }
+    .button:hover, .button:focus-visible { background: #164b39; }
+    .visual { position: relative; min-height: 280px; display: grid; place-items: center; border: 1px solid var(--line); border-radius: 30px; background: linear-gradient(145deg, #dfece4, #fff); }
+    .tile-grid { display: grid; grid-template-columns: repeat(2, 68px); gap: 14px; transform: rotate(-7deg); }
+    .tile { width: 68px; height: 92px; border-radius: 16px; background: var(--accent); box-shadow: 0 12px 22px rgba(23,63,49,.18); position: relative; }
+    .tile::before, .tile::after { content: ""; position: absolute; left: 17px; right: 17px; height: 12px; border-radius: 50%; background: #eef6f0; box-shadow: 0 25px #eef6f0; }
+    .tile::before { top: 18px; }
+    .tile::after { bottom: 18px; }
+    .feature-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 14px; }
+    .feature { padding: 22px; border: 1px solid var(--line); border-radius: 18px; background: var(--card); }
+    .icon { color: var(--gold); font-size: 1.55rem; }
+    .feature p { margin-bottom: 0; color: var(--muted); }
+    footer { color: var(--muted); font-size: .9rem; padding: 30px 4px 0; }
+    footer a { color: var(--accent); }
+    @media (max-width: 700px) { .shell { padding: 20px 14px 40px; } .hero { grid-template-columns: 1fr; padding: 62px 0 52px; } .visual { min-height: 230px; } .feature-grid { grid-template-columns: 1fr; } }
+  </style>
+</head>
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand"><span class="mark" aria-hidden="true"><span></span></span><span>Smart Domino Calculator</span></div>
+      <nav aria-label="Site navigation"><a href="support.html">Support</a><a href="index.html">Privacy</a></nav>
+    </header>
+    <main>
+      <section class="hero">
+        <div>
+          <h1>Snap tiles.<br>Score smarter.</h1>
+          <p class="lede">Turn every domino round into a clear score. Capture the winning tiles, get automatic points, and keep the game moving.</p>
+          <a class="button" href="support.html">Get support</a>
+        </div>
+        <div class="visual" aria-label="Four domino tiles illustration">
+          <div class="tile-grid"><span class="tile"></span><span class="tile"></span><span class="tile"></span><span class="tile"></span></div>
+        </div>
+      </section>
+      <section class="feature-grid" aria-label="Product features">
+        <article class="feature"><div class="icon">✦</div><h2>Fast recognition</h2><p>Use the camera to read visible domino pips and calculate the round score.</p></article>
+        <article class="feature"><div class="icon">◈</div><h2>Flexible games</h2><p>Set up 2 vs 2, 3 Players, or 1 vs 1 with your preferred target score.</p></article>
+        <article class="feature"><div class="icon">↺</div><h2>Never lose your round</h2><p>Games in progress and completed matches are saved locally for easy return.</p></article>
+      </section>
+    </main>
+    <footer>© 2026 Smart Domino Calculator · <a href="index.html">Privacy Policy</a> · <a href="support.html">Support</a></footer>
+  </div>
+</body>
+</html>
